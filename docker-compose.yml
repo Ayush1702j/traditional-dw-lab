@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  source_db:
+    image: postgres:16
+    container_name: source_db
+    environment:
+      POSTGRES_PASSWORD: source123
+    ports:
+      - "5433:5432"
+
+  warehouse_db:
+    image: postgres:16
+    container_name: warehouse_db
+    environment:
+      POSTGRES_PASSWORD: dw123
+    ports:
+      - "5434:5432"
